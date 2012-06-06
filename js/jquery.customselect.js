@@ -7,29 +7,13 @@
 			var defaults = {
 				resetAfterSelection: false,
 				focusClass : 'focus',
-				consoleSelection : false,
-				omitIE:false
+				consoleSelection : false
 			}
 			
 			var that = this;
 				
 			var options =  $.extend(defaults, options);
 
-			function excludeIE(){
-				var browser = $.browser;
-				if(options.ieGreaterThan && browser.version > options.ieGreaterThan){
-					selectify();
-				}
-			}
-
-			function init(){
-				if(options.omitIE === true){
-					excludeIE();
-				}else{
-					selectify()
-				}
-			}
-			
 			function selectify(){
 				that.each(function() {
 					var o = options;
@@ -67,7 +51,7 @@
 	   		});
 			}
 			
-			init();
+			selectify();
    	}
 	});
 })(jQuery);

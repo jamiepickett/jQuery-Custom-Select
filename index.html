@@ -73,7 +73,9 @@
 				</form>
 			</div>
 			<!-- end form -->
-			
+			<h3>Behind the scenes</h3>
+			<p>The magic behind this plugin is that the native select box is still there, it just has an opacity of 0.  CSS z-index has it sitting on top of the span element the plugin wraps around the select box and viol, la.</p>
+
 			<h3>The code you need</h3>
 			<p>First attach the necessary script files to the head of your document:</p>
 			<div class="example">
@@ -89,10 +91,7 @@
 		</div>		
 		<script>
 			$(document).ready(function(){
-				$('[data-customselect]').customSelect({
-					omitIE:true,
-					ieGreaterThan:6
-				});
+				$('[data-customselect]').customSelect();
 				
 				/* stop the form actions */
 				$('form').on('submit',function(e){

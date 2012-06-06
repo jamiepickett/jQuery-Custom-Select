@@ -53,7 +53,7 @@ html,body{
 }
 body{
 	font:normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #404040;
+	background: url('../img/floor.jpg') repeat left top;
 }
 
 #wrap{
@@ -69,6 +69,7 @@ p{
 h1{
 	padding:5px 100px 5px 30px;
 	background: #191919;
+	background: url('../img/bg.jpg') repeat left top;
 	color:#f6f6f6;
 	margin-left:-30px;
 	display: inline-table;
@@ -113,6 +114,7 @@ h3{
 label {
 	text-align: left;
 	display:block;
+	font-weight:bold;
 }
 form .buttons{
 	margin-top:10px;
@@ -124,12 +126,13 @@ form .buttons{
 	font-size: 18px;
 	padding-bottom:10px;
 	border-bottom:1px solid #eaeaea;
+	margin:0;
 }
 .signup p{
 	line-height:1.5em;
 	padding-top:10px;
 	border-top:1px solid #ffffff;
-	margin-bottom:10px;
+	margin:0 0 10px 0;
 }
 
 
@@ -169,6 +172,7 @@ form .buttons{
   -ms-transition: 0.1s linear all;
   -o-transition: 0.1s linear all;
   transition: 0.1s linear all;
+  outline:none;
 }
 .btn:hover {
   background-position: 0 -15px;
@@ -190,6 +194,7 @@ form .buttons{
 	background-image: -o-linear-gradient(top, #b2e0ff, #69b8fc);
 	background-image: linear-gradient(top, #b2e0ff, #69b8fc);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b2e0ff', endColorstr='#69b8fc', GradientType=0);
+	  outline:none;
 }
 
 /* style the form elements */
@@ -226,8 +231,9 @@ input[type=file]:focus, input[type=checkbox]:focus, select:focus {
 
 
 /* Better styles for embedding GitHub Gists */
-.gist{font-size:12px;line-height:18px;margin-bottom:20px;width:100%}
+.gist{font-size:12px;line-height:18px;margin-bottom:20px;width:100%;}
 .gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
-.gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
+.gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important;display:none;}
 .gist-meta a{color:#26a !important;text-decoration:none}
 .gist-meta a:hover{color:#0e4071 !important}
+.gist .gist-file .gist-data{border-bottom:none !important;}

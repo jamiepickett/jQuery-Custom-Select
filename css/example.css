@@ -41,7 +41,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+strong{
+	font-weight: bold;
+}
 .clearfix {zoom:1;}
 .clearfix:before,
 .clearfix:after {display: table;content: "";zoom: 1;*display: inline;}
@@ -52,7 +54,7 @@ html,body{
 	background: #313131;
 }
 body{
-	font:normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font:normal 15px/1.5 'Cabin', Helvetica, Arial, sans-serif;
 	background: url('../img/floor.jpg') repeat left top;
 }
 
@@ -61,6 +63,7 @@ body{
 	margin-left:40px;
 	background: #ffffff;
 	padding:40px 20px;
+	position: relative;
 }
 
 p{
@@ -74,21 +77,52 @@ h1{
 	margin-left:-30px;
 	display: inline-table;
 	display: inline-block;
-	font-size:30px;
+	font-size:35px;
 	text-shadow: 0px 1px 0px #000000;
 	margin-bottom: 30px;
+	font-family: 'Lobster', Georgia, Times, serif;
 }
 
 h2{
 	color:#438ece;
-	font-size:20px;
+	font-size:30px;
 	margin-bottom: 10px;
+	font-family: 'Lobster', Georgia, Times, serif;
 }
 
 h3{
-	color:#438ece;
-	font-size:17px;
+	color:#191919;
+	font-size:25px;
 	margin-bottom: 10px;
+	font-family: 'Lobster', Georgia, Times, serif;
+}
+
+
+.splitcols{
+	width: 600px;
+	margin:30px auto 0 auto;
+	
+}
+.splitcols h2{
+	text-align: center;
+	font-size: 20px;
+	color:#191919;
+}
+.splitcols .left{
+	float: left;
+	width:300px;
+}
+.splitcols .right{
+	float:right;
+	width:300px;
+}
+.splitcols .middle{
+	width: 200px;
+	float:left;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Lobster', Georgia, Times, serif;
+	font-size:30px;
 }
 
 .signup{
@@ -127,6 +161,7 @@ form .buttons{
 	padding-bottom:10px;
 	border-bottom:1px solid #eaeaea;
 	margin:0;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 .signup p{
 	line-height:1.5em;
@@ -174,6 +209,18 @@ form .buttons{
   transition: 0.1s linear all;
   outline:none;
 }
+.git.btn{
+	position: absolute;
+	right:20px;
+	margin-top: 10px;
+}
+.git.btn span{
+	padding:4px 0 4px 26px;
+	vertical-align: middle;
+	background: url('../img/github-icons.png') no-repeat 0 -17px;
+	font-size:17px;
+	text-shadow: 0px 1px 0px #ffffff;
+}
 .btn:hover {
   background-position: 0 -15px;
 }
@@ -212,6 +259,7 @@ input[type="text"], input[type="password"], textarea, select, .uneditable-input{
 	border-radius: 3px;
 	width:200px;
 	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 input:focus, textarea:focus{
   outline: 0;

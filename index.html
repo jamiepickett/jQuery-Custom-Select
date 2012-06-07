@@ -4,77 +4,92 @@
 		<title></title>
 		<link href="css/example.css" rel="stylesheet" media="all" />
 		<link href="css/custom-select.css" rel="stylesheet" media="all" />
+		
+		<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.customselect.js"></script>
+		<script type="text/javascript" src="js/jquery.customselect.min.js"></script>
 	</head>
 	<body>
 		<div id="wrap">
 			<h1>Custom Select: A jQuery Plugin</h1>
-			<p>A jQuery plugin that transforms those ugly select controls into styled gems that fit the design of your form.</p>
+			<a href="https://github.com/iridium13/jQuery-Custom-Select" class="git btn"><span>Download Source</span></a>
 			<h2>Has this happened to you?</h2>
 			<p>You have designed a sweet site for your client.  The registration form looks awesome... in photoshop.  You code up the form, style it to match the design and test it in the browser only to notice that the select element looks out of place</p>
-			<!-- begin form -->
-			<div class="signup">
-				<form>
-					<h3>Receive Promotions</h3>
-					<p>Sign up to receive gender specific promotions from <i>Company XYZ</i>.</p>
-					<fieldset class="clearfix">
-						<div class="first field">
-							<label>Name</label>
-							<input type="text" />
-						</div>
-						<div class="field">
-							<label>Email</label>
-							<input type="text" />
-						</div>
-						<div class="first field">
-							<label>Gender</label>
-							<select>
-								<option>Select</option>
-								<option value="male">Male</option>
-								<option value="female">Female</option>
-							</select>
-						</div>
-					</fieldset>
-					<fieldset class="buttons">
-						<input type="submit" value="Sign me up" class="btn primary" />
-					</fieldset>
-				</form>
-			</div>
-			<!-- end form -->
 			<h2>Enough already!</h2>
-			<p>2 cups of coffee and a couple hours later a plugin is born that takes your traditional select and wraps it up in a nice little snippet of code that can be styled to match the remainder of your form elements.</p>
-			<!-- begin form -->
-			<div class="signup">
-				<form>
-					<h3>Receive Promotions</h3>
-					<p>Sign up to receive gender specific promotions from <i>Company XYZ</i>.</p>
-					<fieldset class="clearfix">
-						<div class="first field">
-							<label>Name</label>
-							<input type="text" />
-						</div>
-						<div class="field">
-							<label>Email</label>
-							<input type="text" />
-						</div>
-						<div class="first field">
-							<label>Gender</label>
-							<select data-customselect="{consoleSelection:true}">
-								<option>Select</option>
-								<option value="male">Male</option>
-								<option value="female">Female</option>
-							</select>
-						</div>
-					</fieldset>
-					<fieldset class="buttons">
-						<input type="submit" value="Sign me up" class="btn primary" />
-					</fieldset>
-				</form>
+			<p>2 cups of coffee and a couple hours later a plugin is born. It takes your traditional select and wraps it up in a nice little snippet of code that can be styled to match the remainder of your form elements.  Have a look below:</p>
+
+			<div class="splitcols clearfix">
+				<div class="left">
+					<h2>CSS Only Select</h2>
+					<!-- begin form -->
+					<div class="signup">
+						<form>
+							<h3>Receive Promotions</h3>
+							<p>Sign up to receive gender specific promotions from <i>Company XYZ</i>.</p>
+							<fieldset class="clearfix">
+								<div class="first field">
+									<label>Name</label>
+									<input type="text" />
+								</div>
+								<div class="field">
+									<label>Email</label>
+									<input type="text" />
+								</div>
+								<div class="first field">
+									<label>Gender</label>
+									<select>
+										<option>Select</option>
+										<option value="male">Male</option>
+										<option value="female">Female</option>
+										<option value="Other">A life form from another planet who is genderless</option>
+									</select>
+								</div>
+							</fieldset>
+							<fieldset class="buttons">
+								<input type="submit" value="Sign me up" class="btn primary" />
+							</fieldset>
+						</form>
+					</div>
+					<!-- end form -->
+				</div>
+				<div class="right">
+					<h2>Custom Select Plugin</h2>
+					<!-- begin form -->
+					<div class="signup">
+						<form>
+							<h3>Receive Promotions</h3>
+							<p>Sign up to receive gender specific promotions from <i>Company XYZ</i>.</p>
+							<fieldset class="clearfix">
+								<div class="first field">
+									<label>Name</label>
+									<input type="text" />
+								</div>
+								<div class="field">
+									<label>Email</label>
+									<input type="text" />
+								</div>
+								<div class="first field">
+									<label>Gender</label>
+									<select data-customselect="{consoleSelection:true}">
+										<option>Select</option>
+										<option value="male">Male</option>
+										<option value="female">Female</option>
+										<option value="Other">A life form from another planet who is genderless</option>
+									</select>
+								</div>
+							</fieldset>
+							<fieldset class="buttons">
+								<input type="submit" value="Sign me up" class="btn primary" />
+							</fieldset>
+						</form>
+					</div>
+					<!-- end form -->
+				</div>
 			</div>
-			<!-- end form -->
 			<h3>Behind the scenes</h3>
-			<p>The magic behind this plugin is that the native select box is still there, it just has an opacity of 0.  CSS z-index has it sitting on top of the span element the plugin wraps around the select box and viol, la.</p>
+			<p>The magic behind this <strong>4 KB</strong> plugin is that the native select box is still there, it just has an opacity of 0.  CSS z-index has it sitting on top of the span element the plugin wraps around the select box and viol, la.  Style it any way you want!</p>
 
 			<h3>The code you need</h3>
 			<p>First attach the necessary script files to the head of your document:</p>
@@ -87,8 +102,10 @@
 				<script src="https://gist.github.com/2884410.js?file=Custom Select Configuration"></script>
 			</div>
 
-			
-		</div>		
+			<h3>Download The Source</h3>
+			<p>The <a href="https://github.com/iridium13/jQuery-Custom-Select">jQuery Custom Select</a> can be downloaded from GitHub.  It is currently in active development so comment and feedback are always welcome.</p>
+
+		</div>
 		<script>
 			$(document).ready(function(){
 				$('[data-customselect]').customSelect();

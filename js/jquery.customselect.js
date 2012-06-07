@@ -8,7 +8,7 @@
 				resetAfterSelection: false,
 				focusClass : 'focus',
 				consoleSelection : false
-			}
+			};
 			
 			var that = this;
 				
@@ -22,32 +22,32 @@
 					var itemData = $.parseJSON(item.data('customselect').replace(/([(A-Za-z0-9\$]+) *:/g, "\"$1\":").replace(/'/g, '"'));
 					var itemKlass = "";
 					itemData.klass ? itemKlass = " "+itemData.klass : itemKlass = "";
-					var selectWrap = item.wrap("<span class='jq-customselect"+itemKlass+"'></span>")
-					var itemSelect = $("<span class='jq-selectchoice'>Select</span>")
-					item.before(itemSelect)
-					itemSelect[0].innerHTML = this.options[this.options.selectedIndex].text
+					var selectWrap = item.wrap("<span class='jq-customselect"+itemKlass+"'></span>");
+					var itemSelect = $("<span class='jq-selectchoice'>Select</span>");
+					item.before(itemSelect);
+					itemSelect[0].innerHTML = this.options[this.options.selectedIndex].text;
 				
 					item.change(function(){
 						itemSelect[0].innerHTML = this.options[this.options.selectedIndex].text;
 						if((itemData.consoleSelection || o.consoleSelection) && console && typeof console.info != "undefined"){
 							var me = this.options[this.options.selectedIndex];
-							console.info("my selection was: '" + me.text + "' and my value is: '" + me.value + "'")
-						}
+							console.info("my selection was: '" + me.text + "' and my value is: '" + me.value + "'");
+						};
 						if(itemData.resetAfterSelection || o.resetAfterSelection){
 							this.selectedIndex = 0;
 							item.trigger('reset');
-						}
+						};
 					}).bind('keyup',function(){
-						itemSelect[0].innerHTML = this.options[this.options.selectedIndex].text
+						itemSelect[0].innerHTML = this.options[this.options.selectedIndex].text;
 					}).bind('focus',function(){
-						item.parents('.jq-customselect').addClass(o.focusClass)
+						item.parents('.jq-customselect').addClass(o.focusClass);
 					}).bind('blur',function(){
-						item.parents('.jq-customselect').removeClass(o.focusClass)
+						item.parents('.jq-customselect').removeClass(o.focusClass);
 					}).bind('reset',function(){
-						itemSelect[0].innerHTML = this.options[this.options.selectedIndex].text
-					})	
+						itemSelect[0].innerHTML = this.options[this.options.selectedIndex].text;
+					});
 					//trigger the reset to revert the cached page selection
-					item.trigger('reset')
+					item.trigger('reset');
 	   		});
 			}
 			

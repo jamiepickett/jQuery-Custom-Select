@@ -99,7 +99,6 @@ h3{
 
 
 .splitcols{
-	width: 600px;
 	margin:30px auto 0 auto;
 	
 }
@@ -120,9 +119,14 @@ h3{
 	width: 200px;
 	float:left;
 	text-align: center;
-	text-transform: uppercase;
-	font-family: 'Lobster', Georgia, Times, serif;
 	font-size:30px;
+	position: relative;
+}
+.splitcols .middle p{
+	font-size:15px;
+	color:#438ece;
+	position: relative;
+	margin:310px 0 0 0;
 }
 
 .signup{
